@@ -23,8 +23,12 @@ public class CarInspectionService {
         }
     }
 
-    public boolean checkCar() {
-        if (numberOfTiresShouldBe4() && seatBeltYesNo() && airBagYesNo() && doors3Or5() == true) {
+    public boolean checkCar(Car car) {
+        boolean Tires = numberOfTiresShouldBe4(car);
+        boolean seatBelt = seatBeltYesNo(car);
+        boolean airBag = airBagYesNo(car);
+        boolean doors = doors3Or5(car);
+        if (Tires && seatBelt && airBag && doors == true) {
             return true;
         } else {
             return false;

@@ -1,18 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class CarInspectionService {
 
-    public boolean numberOfTiresShouldBe4(Car car) {
+    public boolean checkTires(Car car) {
         return car.getNumberOfTires() == 4;
     }
 
-    public boolean seatBeltYesNo(Car car) {
+    public boolean checkSeatBelt(Car car) {
         return car.isSeatBelt();
     }
 
-    public boolean airBagYesNo(Car car) {
+    public boolean checkAirBag(Car car) {
         return car.isAirbag();
     }
 
-    public boolean doors3Or5(Car car) {
+    public boolean checkDoors(Car car) {
         if (car.getNumberOfDoors() == 3) {
             return true;
         }
@@ -24,14 +27,24 @@ public class CarInspectionService {
     }
 
     public boolean checkCar(Car car) {
-        boolean Tires = numberOfTiresShouldBe4(car);
-        boolean seatBelt = seatBeltYesNo(car);
-        boolean airBag = airBagYesNo(car);
-        boolean doors = doors3Or5(car);
-        if (Tires && seatBelt && airBag && doors == true) {
-            return true;
-        } else {
-            return false;
-        }
+        return checkTires(car) &&
+                checkAirBag(car) &&
+                checkDoors(car) &&
+                checkSeatBelt(car);
     }
+
+    // FUNKTIONIERT DAS AUCH SO ?
+//    public boolean checkCar(Car car) {
+//        boolean Tires = numberOfTiresShouldBe4(car);
+//        boolean seatBelt = seatBeltYesNo(car);
+//        boolean airBag = airBagYesNo(car);
+//        boolean doors = doors3Or5(car);
+//        if (Tires && seatBelt && airBag && doors == true) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
+
+
 }

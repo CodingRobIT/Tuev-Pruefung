@@ -3,19 +3,19 @@ import java.util.List;
 
 public class CarInspectionService {
 
-    public boolean checkTires(Car car) {
+    public static boolean checkTires(Car car) {
         return car.getNumberOfTires() == 4;
     }
 
-    public boolean checkSeatBelt(Car car) {
+    public static boolean checkSeatBelt(Car car) {
         return car.isSeatBelt();
     }
 
-    public boolean checkAirBag(Car car) {
+    public static boolean checkAirBag(Car car) {
         return car.isAirbag();
     }
 
-    public boolean checkDoors(Car car) {
+    public static boolean checkDoors(Car car) {
         if (car.getNumberOfDoors() == 3) {
             return true;
         }

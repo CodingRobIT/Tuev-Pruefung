@@ -10,11 +10,10 @@ public class Car {
     //--------------------------constructor---------------------------------------
     public Car() {    //default Construktor
 
-    }
-
+    }         //----XXX---- unten
     public Car(int numberOfTires,int numberOfDoors,boolean seatBelt,boolean airbag) { //Construktor mit allen werten
-        this.numberOfTires = numberOfTires;
-        this.numberOfDoors = numberOfDoors;
+        this.numberOfTires = numberOfTires; //Car carWithThreeTires = new Car(3, 5, true, true);
+        this.numberOfDoors = numberOfDoors; // erster wert ist Tires zweiter Doors dritter seatBelt und vierter airbag
         this.seatBelt = seatBelt;
         this.airbag = airbag;
     }

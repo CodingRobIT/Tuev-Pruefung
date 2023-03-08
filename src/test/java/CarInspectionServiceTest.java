@@ -75,7 +75,7 @@ class CarInspectionServiceTest {
         //GIVEN
         Car carWithNoSeatBelt = new Car(4, 5, false, true);
         //WHEN
-        boolean actual = CarInspectionService.checkDoors(carWithNoSeatBelt);
+        boolean actual = CarInspectionService.checkSeatBelt(carWithNoSeatBelt);
         //THEN
         assertFalse(actual);
     }
